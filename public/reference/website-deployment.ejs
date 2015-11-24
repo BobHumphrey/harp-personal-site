@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div id="links">
+        <ul>
+          <li>
+            <a href=#"htaccess">.htaccess Configuration </a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div id="htaccess">
+        <h3 class="first">.htaccess Configuration</h3>
+        <h4>Force non-www</h4>
+        <pre>
+          RewriteEngine on
+          RewriteCond %{HTTP_HOST} ^www\.
+          RewriteCond %{HTTPS}s ^on(s)|off
+          RewriteCond http%1://%{HTTP_HOST} ^(https?://)(www\.)?(.+)$
+          RewriteRule ^ %1%3%{REQUEST_URI} [R=301,L]
+        </pre>
+        <h4>Disable directory browsing</h4>
+        <pre>
+          Options All -Indexes
+        </pre>
+        <h4>Set expires headers if no cache busting</h4>
+        <pre>
+          [[[IfModule mod_expires.c]]]]
+          ExpiresActive on
+          ExpiresDefault                                      "access plus 1 week"
+          # CSS
+          ExpiresByType text/css                              "access plus 1 week"
+          # Data interchange
+          ExpiresByType application/json                      "access plus 0 seconds"
+          ExpiresByType application/xml                       "access plus 0 seconds"
+          ExpiresByType text/xml                              "access plus 0 seconds"
+          # Favicon (cannot be renamed!)
+          ExpiresByType image/x-icon                          "access plus 1 week"
+          # HTML
+          ExpiresByType text/html                             "access plus 0 seconds"
+          # JavaScript
+          ExpiresByType application/javascript                "access plus 1 day"
+          # Media
+          ExpiresByType audio/ogg                             "access plus 1 month"
+          ExpiresByType image/gif                             "access plus 1 month"
+          ExpiresByType image/jpeg                            "access plus 1 month"
+          ExpiresByType image/png                             "access plus 1 month"
+          ExpiresByType video/mp4                             "access plus 1 month"
+          ExpiresByType video/ogg                             "access plus 1 month"
+          ExpiresByType video/webm                            "access plus 1 month"
+          [[[/IfModule]]]
+        </pre>
+        <h4>Removing the .html extensions
+          <pre>
+            RewriteEngine On
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteRule ^([^\.]+)$ $1.html [NC,L]
+          </pre>
+        </div>
+
+        <div id="xxxxx">
+          <h3>xxxxx</h3>
+        </div>
+
+
+      </div>
+    </div>
+  </div>

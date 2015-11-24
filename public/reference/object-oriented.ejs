@@ -1,0 +1,576 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div id="links">
+          <ul>
+            <li>
+              <a href="#classes">Classes</a>
+            </li>
+            <li>
+              <a href="#getters">Getters and setters</a>
+            </li>
+            <li>
+              <a href="#encapsulation">Encapsulation</a>
+            </li>
+            <li>
+              <a href="#inheritance">Inheritance</a>
+            </li>
+            <li>
+              <a href="#abstract">Abstract classes</a>
+            </li>
+            <li>
+              <a href="#messages">Messages</a>
+            </li>
+            <li>
+              <a href="#namespacing">Namespacing and autoloading</a>
+            </li>
+            <li>
+              <a href="#static">Static methods and properties</a>
+            </li>
+            <li>
+              <a href="#constants">Constants</a>
+            </li>
+            <li>
+              <a href="#interfaces">Interfaces</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div id="classes">
+          <h3 class="first">Classes, attributes and methods</h3>
+          <ul>
+            <li>
+              method - a function inside a class is called a method
+            </li>
+          </ul>
+          <pre>
+            class Task {
+              public $description;
+              public $completed = false;
+
+              public function __construct($description) {
+                $this->description = $description;
+              }
+
+              public function complete() {
+                $this->completed = true;
+              }
+            }
+
+            $task = new Task('Learn OOP');
+
+            print $task->description;
+
+            $task->complete();
+          </pre>
+        </div>
+
+        <div id="getters">
+          <h3>Getters and setters</h3>
+          <pre>
+            class Person {
+
+              protected $name;
+              protected $age;
+
+              public function __construct($name) {
+                $this->name = $name;
+              }
+
+              public function getAge() {
+                return $this->age * 365;
+              }
+
+              public function setAge($age) {
+                if ($age LESS THAN 18) {
+                  throw new Exception("Person is not old enough.");
+                }
+                $this->age = $age;
+              }
+
+            }
+
+            $john = new Person('John');
+            $john->setAge(30);
+
+            $johnsAgeInDays = $john->getAge();
+          </pre>
+        </div>
+
+        <div id="encapsulation">
+          <h3>Encapsulation</h3>
+          <ul>
+            <li>
+              private attributes and functions - can only be used within this class
+            </li>
+            <li>
+              protected attributes and functions - can be used within this class or any class that is extended from this class
+            </li>
+          </ul>
+        </div>
+
+        <div id="inheritance">
+          <h3>Inheritance</h3>
+          <ul>
+            <li>
+              Base class, Parent class
+            </li>
+            <li>
+              Child class, Subclass
+            </li>
+          </ul>
+          <pre>
+            class Mother {
+              public function getEyeCount() {
+                return 2;
+              }
+            }
+
+            class Child extends Mother {
+            }
+
+            (new Child)->getEyeCount();  // 2
+          </pre>
+          <h4>Overriding a base class method</h4>
+          <pre>
+            class Shape {
+              protected $length = 4;
+              public function getArea() {
+                return pow($this->length, 2);
+              }
+            }
+
+            class Square extends Shape {
+
+            }
+
+            class Triangle extends Shape {
+              protected $base = 7;
+              protected $height = 4;
+              public function getArea() {
+                return .5 * $this->base * $this->height;
+              }
+            }
+
+            (new Square)->getArea();
+
+            (new Triangle)->getArea();
+          </pre>
+        </div>
+
+        <div id="abstract">
+          <h3>Abstract classes</h3>
+          <ul>
+            <li>
+              You cannot instantiate an abstract class, but it still provides common functionality to its subclasses.
+            </li>
+            <li>
+              Abstract methods must be implemented by any child classes.
+            </li>
+          </ul>
+          <pre>
+            abstract class Shape {
+              protected $color;
+              public function __construct($color = 'red') {
+                $this->color = $color;
+              }
+              public function getColor() {
+                return $this->color;
+              }
+              abstract protected function getArea();
+            }
+
+            class Square extends Shape {
+              protected $length = 4;
+              public function getArea() {
+                return pow($this->length, 2);
+              }
+            }
+
+            class Triangle extends Shape {
+              protected $base = 7;
+              protected $height = 4;
+              public function getArea() {
+                return .5 * $this->base * $this->height;
+              }
+            }
+
+            (new Square)->color();  // the color of the square defaults to red
+
+            (new Square)->color('blue');   // the color of the square is set to blue
+
+            $area = (new Triangle)->getArea();
+          </pre>
+          <h4>Calling a parent class method from a child class</h4>
+          <pre>
+            abstract class Mailer {
+              public function send($to, $from, $body) {
+
+              }
+            }
+
+            class UserMailer extends Mailer {
+              public function sendWelcomeEmail($user) {
+                return $this->send($user->email, $from, $body);
+              }
+            }
+          </pre>
+        </div>
+
+        <div id="messages">
+          <h3>Messages</h3>
+          <ul>
+            <li>
+              type hinting - specifying the type of an input parameter in a method
+            </li>
+            <li>
+              sending messages - how objects communicate with each other
+            </li>
+            <li>
+              In this example, a business is hiring a person and adding him to its staff.
+            </li>
+          </ul>
+          <pre>
+            class Person {
+              protected $name;
+              public function __construct($name) {
+                $this->name = $name;
+              }
+            }
+
+            class Business {
+              protected $staff;
+              public function __construct(Staff $staff) {
+                $this->staff = $staff;
+              }
+              public function hire(Person $person) {
+                // Add person to the staff collection.
+                $this->staff->add($person);
+              }
+              public function getStaffMembers() {
+                return $this->staff->getMembers();
+              }
+            }
+
+            class Staff {
+              protected $members = [];
+              public function add(Person $person) {
+                $this->members[] = $person;
+              }
+              public function getMembers() {
+                return $this->members;
+              }
+            }
+
+            $jeffrey = new Person('Jeffrey Way');
+            $staff = new Staff;
+            $laracasts = new Business($staff);
+            $laracasts->hire($jeffrey);
+          </pre>
+        </div>
+
+        <div id="namespacing">
+          <h3>Namespacing and autoloading</h3>
+          <ul>
+            <li>
+              You should only have one class per file.
+            </li>
+            <li>
+              Create composer.json file and indicate that you want to use psr-4
+              autoloading.  As a key, specify your root name space, and which
+              directory should be associated with that root name space.
+            </li>
+            <li>
+              Run <b>composer install</b> to create the needed autoloading files.
+              Composer will place a file called autoload.php inside of a folder
+              called vendor.
+            </li>
+            <li>
+              If you have to change composer.json, then run <b>composer
+                dump-autoload</b>.
+              </li>
+              <li>
+                In this example, any class you place directly within the scr directory
+                will have a namespace of Acme.
+              </li>
+              <li>
+                The Users directory is within the src directory, so the namespace for
+                any classes inside that directory will be Acme\Users.
+              </li>
+            </ul>
+            <h4>File structure</h4>
+            <pre>
+              -- OO
+              ----- src
+              -------- Users
+              ----------- Person.php
+              -------- Business.php
+              -------- Staff.php
+              ----- vendor
+              -------- composer
+              -------- autoload.php
+              ----- composer.json
+              ----- example.php
+              ----- index.php
+            </pre>
+            <h4>Person.php</h4>
+            <pre>
+              namespace Acme;
+
+              class Person {
+                protected $name;
+                public function __construct($name) {
+                  $this->name = $name;
+                }
+              }
+            </pre>
+            <h4>Business.php</h4>
+            <pre>
+              namespace Acme;
+              use Acme\Users\Person;
+
+              class Business {
+                protected $staff;
+                public function __construct(Staff $staff) {
+                  $this->staff = $staff;
+                }
+                public function hire(Person $person) {
+                  // Add person to the staff collection.
+                  $this->staff->add($person);
+                }
+                public function getStaffMembers() {
+                  return $this->staff->getMembers();
+                }
+              }
+            </pre>
+            <h4>Staff.php</h4>
+            <pre>
+              namespace Acme;
+              use Acme\Users\Person;
+
+              class Staff {
+                protected $members = [];
+                public function add(Person $person) {
+                  $this->members[] = $person;
+                }
+                public function getMembers() {
+                  return $this->members;
+                }
+              }
+            </pre>
+            <h4>composer.json</h4>
+            <pre>
+              {
+                "autoload": {
+                  "psr-4": {
+                    "Acme\\": "src"
+                  }
+                }
+              }
+            </pre>
+            <h4>example.php</h4>
+            <pre>
+              use Acme\Person;
+              use Acme\Business;
+              use Acme\Staff;
+
+              $jeffrey = new Person('Jeffrey Way');
+              $staff = new Staff;
+              $laracasts = new Business($staff);
+              $laracasts->hire($jeffrey);
+            </pre>
+            <h4>index.php</h4>
+            <pre>
+              //Require the autoloader.
+              require 'vendor/autoload.php';
+              require 'index.php';
+            </pre>
+          </div>
+
+          <div id="static">
+            <h3>Static methods and properties</h3>
+            <ul>
+              <li>
+                Static properties and methods  are called without instantiating
+                a new object.
+              </li>
+              <li>
+                Static properites are shared by everyone that uses the class.  In the
+                example below, the voting results can be accumulated in the class.
+              </li>
+              <li>
+                Static variables are referenced within the class with the static
+                keyword.
+              </li>
+            </ul>
+            <pre>
+              class Results {
+                public static $totalVotes = 0;
+                public static $republican = 0;
+                public static $democrat = 0;
+
+                public static function tally($choice) {
+                  static::$totalVotes += 1;
+                  if ($choice == 'R') {
+                    static::$republican += 1;
+                  }
+                  elseif ($choice == 'D') {
+                    static::$democrat += 1;
+                  }
+                }
+
+                public static function show() {
+                  echo 'Total: ' . static::$totalVotes;
+                  echo 'Republican: ' . static::$republican;
+                  echo 'Democrat: ' . static::$democrat;
+                  echo '<br><br>';
+                }
+              }
+
+              Results::tally('R');
+              Results::show();
+
+
+              Results::tally('D');
+              Results::show();
+
+              Results::tally('D');
+              Results::show();
+            </pre>
+            <h4>Results</h4>
+            <pre>
+              Total: 1  Republican: 1  Democrat: 0
+
+              Total: 2  Republican: 1  Democrat: 1
+
+              Total: 3  Republican: 1  Democrat: 2
+            </pre>
+          </div>
+
+          <div id="constants">
+            <h3>Constants</h3>
+            <ul>
+              <li>
+                Constant names are capitalized
+              </li>
+            </ul>
+            <pre>
+              class BankAccount {
+                const TAX = .09;
+              }
+
+              echo BankAccount::TAX;
+            </pre>
+          </div>
+
+          <div id="interfaces">
+            <h3>Interfaces</h3>
+            <ul>
+              <li>
+                If there are ever classes or tasks where you could imagine yourself
+                as having multiple implementations, multiple different methods for
+                executing the task or behavior, then that is a telltale sign that
+                you need to create an interface.
+              </li>
+              <li>
+                If you are checking for a type of thing, and performing different
+                actions based on the type, then you probably need an interface.
+              </li>
+              <li>
+                Interfaces can only define public methods.
+              </li>
+              <li>
+                In the Logger example below, LogToFile and LogToDatabase both
+                implement the Logger interface.
+              </li>
+              <li>
+                The constructor for UserController takes an object of type Logger,
+                which is the interface, rather than of any concrete implentation of
+                the interface.  That way, you can create a UserController using
+                either a LogToFile or a LogToDatabase object, and UserController does
+                not care either way.
+              </li>
+            </ul>
+            <h4>Interfaces vs. abstract classes</h4>
+            <ul>
+              <li>
+                Abstract classes contain common logic that can be shared by all of
+                the subclasses.  Interfaces do not.
+              </li>
+              <li>
+                Abstract classes can contain abstract methods that have to be
+                implemented by the subclasses.
+              </li>
+              <li>
+                You can use abstract classes and interfaces together,
+                placing the shared logic in the abstract class and the required
+                methods in the interface.
+              </li>
+            </ul>
+            <h4>Simple example</h4>
+            <pre>
+              interface Animal {
+                public function communicate();
+              }
+
+              class Dog implements Animal {
+                public function communicate() {
+                  return 'bark';
+                }
+              }
+
+              class Cat implements Animal {
+                public function communicate() {
+                  return 'meow';
+                }
+              }
+            </pre>
+            <h4>Logger example</h4>
+            <pre>
+              interface Logger{
+                public function execute($message);
+              }
+
+              class LogToFile implements Logger {
+                public function execute($message) {
+                  var_dump('log the message to a file: ' . $message);
+                  echo '<br><br>';
+                }
+              }
+
+              class LogToDatabase implements Logger {
+                public function execute($message) {
+                  var_dump('log the message to a database: ' . $message);
+                  echo '<br><br>';
+                }
+              }
+
+              class UsersController {
+                protected $logger;
+
+                public function __construct(Logger $logger) {
+                  $this->logger = $logger;
+                }
+
+                public function show() {
+                  $user = 'John Doe';
+                  $this->logger->execute($user);
+                }
+              }
+
+              $controller = new UsersController(new LogToFile);
+              $controller->show();
+
+              $controller2 = new UsersController(new LogToDatabase);
+              $controller2->show();
+            </pre>
+            <h4>Results</h4>
+            <pre>
+              string(35) "log the message to a file: John Doe"
+              string(39) "log the message to a database: John Doe"
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
