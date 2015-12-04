@@ -2,5 +2,9 @@
   "index" : {
     "stylesheet": "css/app.css",
     "title": "Home"
+  },
+  "skills" : {
+    "stylesheet": "css/app.css",
+    "title": "Skills"
   }
 }

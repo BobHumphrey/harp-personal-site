@@ -10,5 +10,9 @@
   "online-resources": {
     "stylesheet": "../css/app.css",
     "title": "Online Resources"
+  },
+  "tools": {
+    "stylesheet": "../css/app.css",
+    "title": "Tools"
   }
 }

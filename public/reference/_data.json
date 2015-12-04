@@ -1,4 +1,8 @@
 {
+  "http" : {
+    "stylesheet": "../css/app.css",
+    "title": "HTTP Cheat Sheet"
+  },
   "object-oriented" : {
     "stylesheet": "../css/app.css",
     "title": "Object Oriented PHP Cheat Sheet"
