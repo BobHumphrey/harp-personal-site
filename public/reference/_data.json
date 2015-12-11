@@ -1,7 +1,7 @@
 {
   "http" : {
     "stylesheet": "../css/app.css",
-    "title": "HTTP Cheat Sheet"
+    "title": "HTTP 1.1 Cheat Sheet"
   },
   "object-oriented" : {
     "stylesheet": "../css/app.css",

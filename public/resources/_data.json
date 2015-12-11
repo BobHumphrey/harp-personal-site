@@ -1,0 +1,22 @@
+{
+  "ebooks": {
+    "stylesheet": "../css/app.css",
+    "title": "Ebooks"
+  },
+  "laravel": {
+    "stylesheet": "../css/app.css",
+    "title": "Laravel"
+  },
+  "miscellaneous": {
+    "stylesheet": "../css/app.css",
+    "title": "Miscellaneous"
+  },
+  "news": {
+    "stylesheet": "../css/app.css",
+    "title": "News"
+  },
+  "tools": {
+    "stylesheet": "../css/app.css",
+    "title": "Tools"
+  }
+}

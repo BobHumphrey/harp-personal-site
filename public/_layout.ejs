@@ -32,20 +32,31 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
+          <li><a href="/about.html">ABOUT</a></li>
           <li><a href="/skills.html">SKILLS</a></li>
-          <li><a href="/work/kure-beach-village.html">WORK</a></li>
-          <li><a href="/">ABOUT</a></li>
-          <li><a href="/contact">CONTACT</a></li>
           <li class="dropdown
           <%= current.source=='ebooks'?'active':'' %>">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"
           role="button" aria-haspopup="true" aria-expanded="false">
-          PROGRAMMING <span class="caret"></span></a>
+          WORK <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/programming/ebooks.html">EBOOKS</a></li>
-            <li><a href="/programming/laravel.html">LARAVEL</a></li>
-            <li><a href="/programming/online-resources.html">ONLINE RESOURCES</a></li>
-            <li><a href="/programming/tools.html">TOOLS</a></li>
+            <li><a href="/work/personal.html">PERSONAL PROJECTS</a></li>
+            <li><a href="/work/randall.html">RANDALL LIBRARY PROJECTS</a></li>
+            <li><a href="/work/roadway.html">ROADWAY EXPRESS PROJECTS</a></li>
+          </ul>
+        </li>
+          <li><a href="/contact.html">CONTACT</a></li>
+          <li class="dropdown
+          <%= current.source=='ebooks'?'active':'' %>">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+          role="button" aria-haspopup="true" aria-expanded="false">
+          RESOURCES <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/resources/ebooks.html">EBOOKS</a></li>
+            <li><a href="/resources/laravel.html">LARAVEL</a></li>
+            <li><a href="/resources/miscellaneous.html">MISCELLANEOUS</a></li>
+            <li><a href="/resources/news.html">NEWS</a></li>
+            <li><a href="/resources/tools.html">TOOLS</a></li>
           </ul>
         </li>
         <li class="dropdown nav-hide-small
@@ -54,7 +65,7 @@
         role="button" aria-haspopup="true" aria-expanded="false">
         REFERENCE <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="/reference/http.html">HTTP</a></li>
+          <li><a href="/reference/http.html">HTTP 1.1</a></li>
           <li><a href="/reference/object-oriented.html">OBJECT ORIENTED PHP</a></li>
           <li><a href="/reference/website-deployment.html">WEBSITE DEPLOYMENT</a></li>
         </ul>
@@ -101,6 +112,7 @@
       <div class="footer-title footer-title-top">PROGRAMMING</div>
       <a href="<%= home %>/programming/ebooks.html">Ebooks</a><br>
       <a href="<%= home %>/programming/laravel.html">Laravel</a><br>
+      <a href="<%= home %>/programming/news.html">News</a><br>
       <a href="<%= home %>/programming/online-resources.html">Online Resources</a><br>
     </div>
     <div class="col-md-3">

@@ -3,8 +3,16 @@
     "stylesheet": "css/app.css",
     "title": "Home"
   },
+  "about" : {
+    "stylesheet": "css/app.css",
+    "title": "About"
+  },
   "skills" : {
     "stylesheet": "css/app.css",
     "title": "Skills"
+  },
+  "contact" : {
+    "stylesheet": "css/app.css",
+    "title": "Contact"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "personal" : {
+    "stylesheet": "../css/app.css",
+    "title": "Personal Projects"
+  },
+  "randall" : {
+    "stylesheet": "../css/app.css",
+    "title": "Randall Library Projects"
+  },
+  "roadway" : {
+    "stylesheet": "../css/app.css",
+    "title": "Roadway Express Projects"
+  }
+}
