@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bob Humphrey - HTTP 1.1 Cheat Sheet</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/app.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <div id="outerWrapper">
+
+
+    <!-- NAVBAR ------------------------------------------------------------------->
+
+
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+          data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><img src="/images/logo-80.png"></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a href="/skills.html">SKILLS</a></li>
+          <li class="dropdown
+          ">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+          role="button" aria-haspopup="true" aria-expanded="false">
+          WORK <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/work/personal.html">PERSONAL PROJECTS</a></li>
+            <li><a href="/work/randall.html">RANDALL LIBRARY PROJECTS</a></li>
+            <li><a href="/work/roadway.html">ROADWAY EXPRESS PROJECTS</a></li>
+          </ul>
+        </li>
+          <li><a href="/contact.html">CONTACT</a></li>
+          <li class="dropdown
+          ">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+          role="button" aria-haspopup="true" aria-expanded="false">
+          RESOURCES <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/resources/ebooks.html">EBOOKS</a></li>
+            <li><a href="/resources/laravel.html">LARAVEL</a></li>
+            <li><a href="/resources/miscellaneous.html">MISCELLANEOUS</a></li>
+            <li><a href="/resources/news.html">NEWS</a></li>
+            <li><a href="/resources/tools.html">TOOLS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown visible-xs-inline visible-md-inline visible-lg-inline
+        ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+        role="button" aria-haspopup="true" aria-expanded="false">
+        REFERENCE <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/reference/http.html">HTTP 1.1</a></li>
+          <li><a href="/reference/object-oriented.html">OBJECT ORIENTED PHP</a></li>
+          <li><a href="/reference/website-deployment.html">WEBSITE DEPLOYMENT</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+
+<!-- CONTENT ------------------------------------------------------------------>
+
+
+<section id="content">
+  <div id="page-heading">
+    <h2>HTTP 1.1 Cheat Sheet</h2>
+  </div>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div id="links">
+        <ul>
+          <li>
+            <a href="#urls">URLs</a>
+          </li>
+          <li>
+            <a href="#verbs">Requests</a>
+          </li>
+          <li>
+            <a href="#status-codes">Status Codes</a>
+          </li>
+          <li>
+            <a href="#messages">Message Formats</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+          <li>
+            <a href="xxxxx">xxxxx</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div id="urls">
+        <h3 class="first">URLs</h3>
+        <b>http://www.example.com:9000/example_path?a=100&b=200</b><br><br>
+        <b>http://</b> - protocol <br>
+        <b>www.example.com</b> - host <br>
+        <b>9000</b> - port <br>
+        <b>example_path</b> - path <br>
+        <b>?a=100&b=200</b> - query <br>
+      </div>
+
+      <div id="verbs">
+        <h3>Requests</h3>
+        <b>GET</b> - fetch an existing resource <br>
+        <b>POST</b> - create a new resource <br>
+        <b>PUT</b> - update an existing resource <br>
+        <b>DELETE</b> - delete an existing resource <br>
+        <b>HEAD</b> - fetch the server headers for an existing resource <br>
+        <b>TRACE</b> - used for diagnostic purposes <br>
+        <b>OPTIONS</b> - retrieve the server capabilities <br>
+      </div>
+
+      <div id="status-codes">
+        <h3>Status Codes</h3>
+        Definitions from <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank">Wikipedia</a><br><br>
+        <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" target="_blank">W3C Reference</a><br>
+        <h4>1xx - Informational</h4>
+        <dl>
+          <dt><span id="100"></span>100 Continue</dt>
+          <dd>This means that the server has received the request headers, and that the client should proceed to send the request body.</dd>
+          <dt><span id="101"></span>101 Switching Protocols</dt>
+          <dd>This means the requester has asked the server to switch protocols and the server is acknowledging that it will do so.</dd>
+          <dt><span id="102"></span>102 Processing</dt>
+          <dd>As a WebDAV request may contain many sub-requests involving file operations, it may take a long time to complete the request. This code indicates that the server has received and is processing the request, but no response is available yet. This prevents the client from timing out and assuming the request was lost.</dd>
+        </dl>
+        <h4>2xx - Success</h4>
+        <dl>
+          <dt><span id="200"></span>200 OK</dt>
+          <dd>Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request, the response will contain an entity describing or containing the result of the action.</dd>
+          <dt><span id="201"></span>201 Created</dt>
+          <dd>The request has been fulfilled and resulted in a new resource being created.</dd>
+          <dt><span id="202"></span>202 Accepted</dt>
+          <dd>The request has been accepted for processing, but the processing has not been completed. The request might or might not eventually be acted upon, as it might be disallowed when processing actually takes place.</dd>
+          <dt><span id="203"></span>203 Non-Authoritative Information (since HTTP/1.1)</dt>
+          <dd>The server successfully processed the request, but is returning information that may be from another source.</dd>
+          <dt><span id="204"></span>204 No Content</dt>
+          <dd>The server successfully processed the request, but is not returning any content.</dd>
+          <dt><span id="205"></span>205 Reset Content</dt>
+          <dd>The server successfully processed the request, but is not returning any content. Unlike a 204 response, this response requires that the requester reset the document view.</dd>
+          <dt><span id="206"></span>206 Partial Content </dt>
+          <dd>The server is delivering only part of the resource  due to a range header sent by the client. The range header is used by HTTP clients to enable resuming of interrupted downloads, or split a download into multiple simultaneous streams.</dd>
+          <dt><span id="207"></span>207 Multi-Status (WebDAV; RFC 4918)</dt>
+          <dd>The message body that follows is an XML message and can contain a number of separate response codes, depending on how many sub-requests were made.</dd>
+          <dt><span id="208"></span>208 Already Reported (WebDAV; RFC 5842)</dt>
+          <dd>The members of a DAV binding have already been enumerated in a previous reply to this request, and are not being included again.</dd>
+          <dt><span id="226"></span>226 IM Used (RFC 3229)</dt>
+          <dd>The server has fulfilled a request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.</dd>
+        </dl>
+        <h4>3xx - Redirection</h4>
+        <dl>
+          <dt><span id="300"></span>300 Multiple Choices</dt>
+          <dd>Indicates multiple options for the resource that the client may follow. It, for instance, could be used to present different format options for video, list files with different extensions, or word sense disambiguation.</dd>
+          <dt><span id="301"></span>301 Moved Permanently</dt>
+          <dd>This and all future requests should be directed to the given URI.</dd>
+          <dt><span id="302"></span>302 Found</dt>
+          <dd>This is an example of industry practice contradicting the standard. The HTTP/1.0 specification (RFC 1945) required the client to perform a temporary redirect (the original describing phrase was "Moved Temporarily"), but popular browsers implemented 302 with the functionality of a 303 See Other. Therefore, HTTP/1.1 added status codes 303 and 307 to distinguish between the two behaviours. However, some Web applications and frameworks use the 302 status code as if it were the 303.</dd>
+          <dt><span id="303"></span>303 See Other (since HTTP/1.1)</dt>
+          <dd>The response to the request can be found under another URI using a GET method. When received in response to a POST (or PUT/DELETE), it should be assumed that the server has received the data and the redirect should be issued with a separate GET message.</dd>
+          <dt><span id="304"></span>304 Not Modified</dt>
+          <dd>Indicates that the resource has not been modified since the version specified by the request headers If-Modified-Since or If-None-Match. This means that there is no need to retransmit the resource, since the client still has a previously-downloaded copy.</dd>
+          <dt><span id="305"></span>305 Use Proxy (since HTTP/1.1)</dt>
+          <dd>The requested resource is only available through a proxy, whose address is provided in the response. Many HTTP clients (such as Mozilla and Internet Explorer) do not correctly handle responses with this status code, primarily for security reasons.</dd>
+          <dt><span id="306"></span>306 Switch Proxy</dt>
+          <dd>No longer used. Originally meant "Subsequent requests should use the specified proxy."</dd>
+          <dt><span id="307"></span>307 Temporary Redirect (since HTTP/1.1)</dt>
+          <dd>In this case, the request should be repeated with another URI; however, future requests should still use the original URI. In contrast to how 302 was historically implemented, the request method is not allowed to be changed when reissuing the original request. For instance, a POST request should be repeated using another POST request.</dd>
+          <dt><span id="308"></span>308 Permanent Redirect (RFC 7538)</dt>
+          <dd>The request, and all future requests should be repeated using another URI. 307 and 308 (as proposed) parallel the behaviours of 302 and 301, but <i>do not allow the HTTP method to change</i>. So, for example, submitting a form to a permanently redirected resource may continue smoothly.</dd>
+          <dt><span id="308-Google"></span>308 Resume Incomplete (Google)</dt>
+          <dd>This code is used in the Resumable HTTP Requests Proposal to resume aborted PUT or POST requests.</dd>
+        </dl>
+      </div>
+      <h4>4xx - Client Error</h4>
+      <dl>
+        <dt><span id="400"></span>400 Bad Request</dt>
+        <dd>The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).</dd>
+        <dt><span id="401"></span>401 Unauthorized </dt>
+        <dd>Similar to <i>403 Forbidden</i>, but specifically for use when authentication is required and has failed or has not yet been provided. The response must include a WWW-Authenticate header field containing a challenge applicable to the requested resource. </dd>
+        <dt><span id="402"></span>402 Payment Required</dt>
+        <dd>Reserved for future use. The original intention was that this code might be used as part of some form of digital cash or micropayment scheme, but that has not happened, and this code is not usually used. Google Developers API uses this status if a particular developer has exceeded the daily limit on requests.</dd>
+        <dt><span id="403"></span>403 Forbidden</dt>
+        <dd>The request was a valid request, but the server is refusing to respond to it. Unlike a <i>401 Unauthorized</i> response, authenticating will make no difference. 403 error semantically means "unauthorized", i.e. "you don't have necessary permissions for the resource".</dd>
+        <dt><span id="404"></span>404 Not Found</dt>
+        <dd>The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible.</dd>
+        <dt><span id="405"></span>405 Method Not Allowed</dt>
+        <dd>A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource.</dd>
+        <dt><span id="406"></span>406 Not Acceptable</dt>
+        <dd>The requested resource is only capable of generating content not acceptable according to the Accept headers sent in the request.</dd>
+        <dt><span id="407"></span>407 Proxy Authentication Required </dt>
+        <dd>The client must first authenticate itself with the proxy.</dd>
+        <dt><span id="408"></span>408 Request Timeout</dt>
+        <dd>The server timed out waiting for the request. According to HTTP specifications: "The client did not produce a request within the time that the server was prepared to wait. The client MAY repeat the request without modifications at any later time."</dd>
+        <dt><span id="409"></span>409 Conflict</dt>
+        <dd>Indicates that the request could not be processed because of conflict in the request, such as an edit conflict in the case of multiple updates.</dd>
+        <dt><span id="410"></span>410 Gone</dt>
+        <dd>Indicates that the resource requested is no longer available and will not be available again. This should be used when a resource has been intentionally removed and the resource should be purged. Upon receiving a 410 status code, the client should not request the resource again in the future. Clients such as search engines should remove the resource from their indices. Most use cases do not require clients and search engines to purge the resource, and a "404 Not Found" may be used instead.</dd>
+        <dt><span id="411"></span>411 Length Required</dt>
+        <dd>The request did not specify the length of its content, which is required by the requested resource.</dd>
+        <dt><span id="412"></span>412 Precondition Failed </dt>
+        <dd>The server does not meet one of the preconditions that the requester put on the request.</dd>
+        <dt><span id="413"></span>413 Payload Too Large </dt>
+        <dd>The request is larger than the server is willing or able to process. Called "Request Entity Too Large" previously.</dd>
+        <dt><span id="414"></span>414 URI Too Long </dt>
+        <dd>The URI provided was too long for the server to process. Often the result of too much data being encoded as a query-string of a GET request, in which case it should be converted to a POST request. Called "Request-URI Too Long" previously.</dd>
+        <dt><span id="415"></span>415 Unsupported Media Type</dt>
+        <dd>The request entity has a media type which the server or resource does not support. For example, the client uploads an image as image/svg+xml, but the server requires that images use a different format.</dd>
+        <dt><span id="416"></span>416 Range Not Satisfiable </dt>
+        <dd>The client has asked for a portion of the file, but the server cannot supply that portion. For example, if the client asked for a part of the file that lies beyond the end of the file. Called "Requested Range Not Satisfiable" previously.</dd>
+        <dt><span id="417"></span>417 Expectation Failed</dt>
+        <dd>The server cannot meet the requirements of the Expect request-header field.</dd>
+      </dl>
+      <h4>5xx - Server Error</h4>
+      <dl>
+        <dt><span id="500"></span>500 Internal Server Error</dt>
+        <dd>A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.</dd>
+        <dt><span id="501"></span>501 Not Implemented</dt>
+        <dd>The server either does not recognize the request method, or it lacks the ability to fulfill the request. Usually this implies future availability (e.g., a new feature of a web-service API).</dd>
+        <dt><span id="502"></span>502 Bad Gateway</dt>
+        <dd>The server was acting as a gateway or proxy and received an invalid response from the upstream server.</dd>
+        <dt><span id="503"></span>503 Service Unavailable</dt>
+        <dd>The server is currently unavailable (because it is overloaded or down for maintenance). Generally, this is a temporary state.</dd>
+        <dt><span id="504"></span>504 Gateway Timeout</dt>
+        <dd>The server was acting as a gateway or proxy and did not receive a timely response from the upstream server.</dd>
+        <dt><span id="505"></span>505 HTTP Version Not Supported</dt>
+        <dd>The server does not support the HTTP protocol version used in the request.</dd>
+      </dl>
+
+
+      <div id="messages">
+        <h3>Message Formats</h3>
+        <h4>Request Format</h4>
+        <pre>
+          GET /galleries HTTP/1.1
+          Host: photography.bobhumphrey.org
+          Connection: keep-alive
+          Cache-Control: max-age=0
+          Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+          Upgrade-Insecure-Requests: 1
+          User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36
+          DNT: 1
+          Referer: http://photography.bobhumphrey.org/
+          Accept-Encoding: gzip, deflate, sdch
+          Accept-Language: en-US,en;q=0.8
+          Cookie:
+        </pre>
+        <h4>Request Headers</h4>
+        <dt>Accept</dt>
+        <dd>Content-Types that are acceptable for the response</dd>
+        <dt>Accept-Charset</dt>
+        <dd>Character sets that are acceptable</dd>
+        <dt>Accept-Encoding</dt>
+        <dd>List of acceptable encodings</dd>
+        <dt>Accept-Language</dt>
+        <dd>List of acceptable human languages for response</dd>
+        <dt>Accept-Datetime</dt>
+        <dd>Acceptable version in time</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dt>xxxxx</dt>
+        <dd>xxxxx</dd>
+        <dl>
+        </dl>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!--
+  <div id="xxxxx">
+  <h3>xxxxx</h3>
+  <a href="xxxxxx" target="_blank">xxxxxx</a><br>
+  <a href="xxxxxx" target="_blank">xxxxxx</a><br>
+  <a href="xxxxxx" target="_blank">xxxxxx</a><br>
+  <a href="xxxxxx" target="_blank">xxxxxx</a><br>
+  <a href="xxxxxx" target="_blank">xxxxxx</a><br>
+</div>
+--></div>
+</section>
+
+
+<!-- FOOTER ------------------------------------------------------------------->
+
+
+<footer>
+  <div class="container">
+    <div class="logo-row row">
+      <a href="http://webdevelopment.bobhumphrey.org"><img class="footer-logo" src="/images/logo-80.png"></a>
+    </div>
+    <div class="bh-row row">
+      <a href="http://webdevelopment.bobhumphrey.org">BOB HUMPHREY</a>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="footer-title footer-title-top">ABOUT</div>
+        <a href="http://webdevelopment.bobhumphrey.org/about.html">About</a><br>
+        <br>
+        <div class="footer-title footer-title-top">SKILLS</div>
+        <a href="http://webdevelopment.bobhumphrey.org/skills.html">Skills</a><br>
+        <br>
+        <div class="footer-title footer-title-top">WORK</div>
+        <a href="http://webdevelopment.bobhumphrey.org/work/personal.html">Personal Projects</a><br>
+        <a href="http://webdevelopment.bobhumphrey.org/work/randall.html">Randall Library Projects</a><br>
+        <a href="http://webdevelopment.bobhumphrey.org/work/roadway.html">Roadway Express Projects</a><br>
+      </hr>
+    </div>
+    <div class="col-md-3">
+      <div class="footer-title footer-title-top">PERSONAL PROJECTS</div>
+      <a href="http://photography.bobhumphrey.org/">Tumblr Photos</a><br>
+    </div>
+    <div class="col-md-3">
+      <div class="footer-title footer-title-top">RESOURCES</div>
+      <a href="http://webdevelopment.bobhumphrey.org/resources/ebooks.html">Ebooks</a><br>
+      <a href="http://webdevelopment.bobhumphrey.org/resources/laravel.html">Laravel</a><br>
+      <a href="http://webdevelopment.bobhumphrey.org/resources/miscellaneous.html">Miscellaneous</a><br>
+      <a href="http://webdevelopment.bobhumphrey.org/resources/news.html">News</a><br>
+      <a href="http://webdevelopment.bobhumphrey.org/resources/tools.html">Tools</a><br>
+    </div>
+    <div class="col-md-3">
+      <div class="footer-title footer-title-top">REFERENCE</div>
+      <a href="http://webdevelopment.bobhumphrey.org/reference/http.html">HTTP 1.1</a><br>
+      <a href="http://webdevelopment.bobhumphrey.org/reference/object-oriented.html">Object Oriented PHP</a><br>
+      <a href="http://webdevelopment.bobhumphrey.org/reference/website-deployment.html">Website Deployment</a><br>
+    </div>
+  </div>
+</div>
+</footer>
+
+
+<!-- SCRIPTS ------------------------------------------------------------------>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+<script src="/js/production.js"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-6192228-3', 'bobhumphrey.org');
+ga('send', 'pageview');
+</script>
+</div>
+</body>
+</html>

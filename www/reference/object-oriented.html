@@ -9,61 +9,81 @@
 </head>
 <body>
   <div id="outerWrapper">
+
+
+    <!-- NAVBAR ------------------------------------------------------------------->
+
+
     <nav class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
+      <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed"
           data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
           aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/"><img src="/images/logo-80.png"></a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/">SKILLS</a></li>
-            <li><a href="/work/kure-beach-village.html">WORK</a></li>
-            <li><a href="/">ABOUT</a></li>
-            <li><a href="/contact">CONTACT</a></li>
-            <li class="dropdown
-            ">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-              role="button" aria-haspopup="true" aria-expanded="false">
-              PROGRAMMING <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="/programming/ebooks.html">EBOOKS</a></li>
-              </ul>
-            </li>
-            <li class="dropdown nav-hide-small
-            active">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-              role="button" aria-haspopup="true" aria-expanded="false">
-              REFERENCE <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <lI><a href="/reference/object-oriented.html">OBJECT ORIENTED PHP</a></li>
-              </ul>
-            </li>
-        </ul>
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><img src="/images/logo-80.png"></a>
       </div>
-    </div>
-  </nav>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a href="/skills.html">SKILLS</a></li>
+          <li class="dropdown
+          ">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+          role="button" aria-haspopup="true" aria-expanded="false">
+          WORK <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/work/personal.html">PERSONAL PROJECTS</a></li>
+            <li><a href="/work/randall.html">RANDALL LIBRARY PROJECTS</a></li>
+            <li><a href="/work/roadway.html">ROADWAY EXPRESS PROJECTS</a></li>
+          </ul>
+        </li>
+          <li><a href="/contact.html">CONTACT</a></li>
+          <li class="dropdown
+          ">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+          role="button" aria-haspopup="true" aria-expanded="false">
+          RESOURCES <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/resources/ebooks.html">EBOOKS</a></li>
+            <li><a href="/resources/laravel.html">LARAVEL</a></li>
+            <li><a href="/resources/miscellaneous.html">MISCELLANEOUS</a></li>
+            <li><a href="/resources/news.html">NEWS</a></li>
+            <li><a href="/resources/tools.html">TOOLS</a></li>
+          </ul>
+        </li>
+        <li class="dropdown visible-xs-inline visible-md-inline visible-lg-inline
+        active">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+        role="button" aria-haspopup="true" aria-expanded="false">
+        REFERENCE <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/reference/http.html">HTTP 1.1</a></li>
+          <li><a href="/reference/object-oriented.html">OBJECT ORIENTED PHP</a></li>
+          <li><a href="/reference/website-deployment.html">WEBSITE DEPLOYMENT</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
 
 
+<!-- CONTENT ------------------------------------------------------------------>
 
 
-
-
-  <section id="content">
-    <div id="page-heading">
-      <h2>Object Oriented PHP Cheat Sheet</h2>
-    </div>
-    <div class="container">
+<section id="content">
+  <div id="page-heading">
+    <h2>Object Oriented PHP Cheat Sheet</h2>
+  </div>
+  <div class="container">
     <div class="row">
       <div class="col-md-4">
         <div id="links">
@@ -639,15 +659,13 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
 
 
+<!-- FOOTER ------------------------------------------------------------------->
 
 
-
-
-
-  <footer>
+<footer>
   <div class="container">
     <div class="logo-row row">
       <a href="http://webdevelopment.bobhumphrey.org"><img class="footer-logo" src="/images/logo-80.png"></a>
@@ -657,47 +675,56 @@
     </div>
     <div class="row">
       <div class="col-md-3">
-        <div><a href="http://webdevelopment.bobhumphrey.org">Bob Humphrey</a></div>
-        <div><a href="http://webdevelopment.bobhumphrey.org">Web Development</a></div>
+        <div class="footer-title footer-title-top">ABOUT</div>
+        <a href="http://webdevelopment.bobhumphrey.org/about.html">About</a><br>
+        <br>
+        <div class="footer-title footer-title-top">SKILLS</div>
+        <a href="http://webdevelopment.bobhumphrey.org/skills.html">Skills</a><br>
+        <br>
+        <div class="footer-title footer-title-top">WORK</div>
+        <a href="http://webdevelopment.bobhumphrey.org/work/personal.html">Personal Projects</a><br>
+        <a href="http://webdevelopment.bobhumphrey.org/work/randall.html">Randall Library Projects</a><br>
+        <a href="http://webdevelopment.bobhumphrey.org/work/roadway.html">Roadway Express Projects</a><br>
       </hr>
     </div>
     <div class="col-md-3">
-      <div class="footer-title footer-title-top">WORK</div>
+      <div class="footer-title footer-title-top">PERSONAL PROJECTS</div>
       <a href="http://photography.bobhumphrey.org/">Tumblr Photos</a><br>
     </div>
     <div class="col-md-3">
-      <div class="footer-title footer-title-top">PROGRAMMING</div>
-      <a href="http://webdevelopment.bobhumphrey.org/programming/ebooks.html">Ebooks</a><br>
+      <div class="footer-title footer-title-top">RESOURCES</div>
+      <a href="http://webdevelopment.bobhumphrey.org/resources/ebooks.html">Ebooks</a><br>
+      <a href="http://webdevelopment.bobhumphrey.org/resources/laravel.html">Laravel</a><br>
+      <a href="http://webdevelopment.bobhumphrey.org/resources/miscellaneous.html">Miscellaneous</a><br>
+      <a href="http://webdevelopment.bobhumphrey.org/resources/news.html">News</a><br>
+      <a href="http://webdevelopment.bobhumphrey.org/resources/tools.html">Tools</a><br>
     </div>
     <div class="col-md-3">
       <div class="footer-title footer-title-top">REFERENCE</div>
+      <a href="http://webdevelopment.bobhumphrey.org/reference/http.html">HTTP 1.1</a><br>
       <a href="http://webdevelopment.bobhumphrey.org/reference/object-oriented.html">Object Oriented PHP</a><br>
+      <a href="http://webdevelopment.bobhumphrey.org/reference/website-deployment.html">Website Deployment</a><br>
     </div>
   </div>
 </div>
 </footer>
 
 
+<!-- SCRIPTS ------------------------------------------------------------------>
 
 
-
-
-
-
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
-        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
-        <script src="/js/production.js"></script>
-        <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-6192228-3', 'bobhumphrey.org');
-        ga('send', 'pageview');
-        </script>
-      </div>
-    </body>
-    </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+<script src="/js/production.js"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-6192228-3', 'bobhumphrey.org');
+ga('send', 'pageview');
+</script>
+</div>
+</body>
+</html>
