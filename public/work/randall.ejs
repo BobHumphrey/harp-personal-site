@@ -1,217 +1,914 @@
 <div class="container">
-  <div id="other-ptojects">
 
-    <div class="project">
+  <div id="projects">
+
+    <div class="project-first">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <img src="../images/bento.jpg" class="img-responsive" alt="Bento box search page">
+        </div>
+      </div>
       <div class="row">
         <div class="col-md-8 col-md-offset-4">
-          <h4>Virtual Shelf</h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <ul class="skills">
-            <li>PHP &#x25CF; Yii Framework</li>
-            <li>MySQL &#x25CF; HTML &#x25CF; CSS</li>
-            <li>Sierra API</li>
-          </ul>
-        </div>
-        <div class="col-md-8 col-md-offset-1">
-          <p>
-            This project creates a local database of library inventory,
-            indexed by call number.  It involves downloading a million plus
-            records from
-            <a href="https://www.iii.com/products/sierra" target="_blank">
-            Sierra</a>, the library's resource management server hosted by
-            <a href="https://www.iii.com/" target="_blank">
-            Innovative Interfaces Inc</a>, using the API provided by the vendor.
-            Since transactions with Sierra timeout after several thousand
-            records have been received, this process has been built as a series
-            of batch jobs that repeat every five minutes beginning at 1 in
-            the morning.  The project includes online reports for monitoring
-            the batch jobs and viewing the resulting data.  It is the
-            foundation for a number of new applications to be built using this
-            data.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-4">
-          <h4>Information Literacy</h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <ul class="skills">
-            <li>Responsive Design &#x25CF; Drupal</li>
-            <li>HTML &#x25CF; Sass &#x25CF; CSS</li>
-            <li><a href="http://library.uncw.edu/info_lit/" target="_blank">See the Project</a></li>
-          </ul>
-        </div>
-        <div class="col-md-8 col-md-offset-1">
-          <p>
-            <strong>Information Literacy</strong> is the ability to locate,
-            evaluate, and use information effectively.  This site was created
-            to help students, faculty, and librarians learn these skills.
-            My contribution was to modify the theme to create Randall
-            Library's first responsive website.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-4">
-          <h4>Best Bets</h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <ul class="skills">
-            <li>PHP &#x25CF; Yii Framework</li>
-            <li>Bootstrap Framework</li>
-            <li>HTML &#x25CF; CSS &#x25CF; MySQL</li>
-          </ul>
-        </div>
-        <div class="col-md-8 col-md-offset-1">
-          <p>
-            <strong>Best Bets</strong> is a data entry app that allows
-            library staff to key in popular terms and resources that
-            are often searched for by students. This information will be used
-            to improve the library's
-            <a href="http://library.uncw.edu/search_randall" target="_blank">
-            Bento Box search</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-4">
-          <h4>Information Kiosk Heatmap</h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <ul class="skills">
-            <li>JavaScript</li>
-            <li>Open source software</li>
-          </ul>
-        </div>
-        <div class="col-md-8 col-md-offset-1">
-          <p>
-            The library created an electronic information kiosk to help patrons
-            find people, places, resources, and events within the
-            building.  We wanted to get a better idea if the application was
-            being used the way we envisioned.
-            <a href="http://www.labsmedia.com/clickheat/index.html"
-            target="_blank">ClickHeat</a> was identified as a good open
-            source heatmap tool to assist with this.  It was my job to
-            install the software and get it working with our application.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-4">
-          <h4>Follow Me Tutorials</h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <ul class="skills">
-            <li>JavaScript &#x25CF; HTML</li>
-            <li>Sass &#x25CF; CSS </li>
-            <li>Open source software</li>
-            <li><a href="http://library.uncw.edu/guided_tutorial/links/"
-              target="_blank">See the Project</a></li>
-          </ul>
-        </div>
-        <div class="col-md-8 col-md-offset-1">
-          <p>
-            This application allows librarians to create guided tutorials
-            to help students access and use library, university, and other
-            internet resouces.  Based on the open source
-            <a href="http://code.library.arizona.edu/" target="_blank">
-            Guide on the Side</a> project created by The University of
-            Arizona, it displays instructions on one side of a browser
-            window and a relevant web page on the other.  Students
-            are advised to use the displayed web page to follow along
-            with the instructions provided.  I was asked to
-            customize the project for use at Randall Library, and to
-            document the process so that other staff members could do the
-            same.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-4">
-          <h4>Assignment Calculator</h4>
+          <h3>Bento Box Search</h3>
         </div>
       </div>
       <div class="row">
         <div class="col-md-3">
           <ul class="skills">
             <li>PHP &#x25CF; Drupal</li>
+            <li>JavaScript &#x25CF; jQuery &#x25CF; Ajax</li>
+            <li>MySQL &#x25CF; phpMyAdmin</li>
             <li>HTML &#x25CF; CSS</li>
-            <li>Open source software</li>
-            <li><a href="http://randall3.uncw.edu/assignmentcalc/" target="_blank">See the Project</a></li>
+            <li>Screen scraping</li>
+            <li><a href="http://api.summon.serialssolutions.com/" target="_blank">Summon Serial Solutions API</a></li>
+            <li><a href="https://developers.google.com/custom-search/" target="_blank">Google Custom Search API</a></li>
+            <li><a href="http://library.uncw.edu/search_randall" target="_blank">Vist the Site</a></li>
           </ul>
         </div>
         <div class="col-md-8 col-md-offset-1">
           <p>
-            The Assignment Calculator is open source software created by
-            <a href="https://www.lib.umn.edu/apps/ac/" target="_blank">
-            The University of Minnesota Libraries</a> to help students budget
-            their time when working on complicated projects.  The student
-            provides a due date, and the calculator breaks the assignment
-            into a series of steps, each with its own completion date.  I
-            added additional customization requested by Randall Library,
-            including the ability to use multiple kinds of project templates
-            within the application for different types of assignments.
+            This is a new version of Randall Library’s search box that looks
+            across multiple systems, presenting the top results in separate
+            categories on a single page.  This kind of search application has
+            proven to be popular at many of the nation’s top academic libraries,
+            including UNC Chapel Hill, Duke, Princeton, and Cornell. The name
+            has been borrowed from Japanese takeout meals and lunch boxes,
+            where each individual item is placed in its own individual
+            compartment.
           </p>
-        </div>
+          <p>
+            Patrons enter search terms in a simple box, and then the application
+            makes calls to various sources, including the library catalog,
+            Google, and Summon Serial Solutions, a service that provides access
+            to scholarly articles, journals, newspapers, and magazines.
+          </p>
+          <p>
+            Multiple Ajax calls are employed to fetch the information behind the
+            scenes, and then the results are presented in a way that encourages
+            additional searching and deeper exploration.  The application is
+            written as a Drupal module so that it integrates seamlessly with the
+            rest of the library website.
+          </p>
+        <p>
+          Search results for books, e-books, videos, and music come from Randall
+          Library’s own catalog, but we were unable to produce results that
+          were an exact match to our other catalog searches.  The reason for
+          this is that the catalog software is provided by an outside vendor
+          who doesn’t share their proprietary search algorithms.  We solved
+          this problem by screen-scraping our own catalog pages, with the payoff
+          being consistent results every time.
+        </p>
       </div>
     </div>
+  </div>
 
-
-
+  <div class="project">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <img src="../images/group-study.jpg" class="img-responsive" alt="Group study room reservation application">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-4">
+        <h3>Group Study Room Reservations</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="skills">
+          <li>PHP &#x25CF; Drupal module coding</li>
+          <li>JavaScript &#x25CF; jQuery</li>
+          <li>MySQL &#x25CF; phpMyAdmin</li>
+          <li>HTML &#x25CF; CSS</li>
+          <li><a href="http://library.uncw.edu/room_reservations" target="_blank">Vist the desktop site</a></li>
+        </ul>
+      </div>
+      <div class="col-md-8 col-md-offset-1">
+        <p>
+          Like most academic libraries, Randall Library had a number of rooms
+          set aside for groups to get together and study.  But access to these
+          rooms was somewhat difficult.  Since they were available on a first
+          come, first serve basis, and there was a high demand for these rooms,
+          it was very difficult for groups of students to make plans ahead of
+          time to secure a quiet, private study space.
+        </p>
+        <p>
+          The library wanted a scheduling application that patrons could use to
+          reserve a group study room at a future time.  It had to be so easy to
+          use that students could manage the whole process themselves, with
+          little to no assistance from the already busy library staff.  The
+          application needed to implement library specific rules, such as one
+          reservation per day per student, and a two hour maximum time limit.
+          It also had to work seamlessly with the rest of the library web site.
+        </p>
+        <p>
+          I created the Room Reservation Drupal module to meet these
+          requirements. An easy to use calendar shows students what rooms are
+          available on any given day and time.  Clicking an open slot on the
+          calendar brings up a simple form that is used to complete the
+          reservation.  Confirmation and reminder messages are emailed to the
+          student, or sent as a message to the student’s cell phone.  In the
+          three years since the application was launched, it has been
+          successfully used to make more than 59,000 reservations.
+        </p>
+        <p>
+          The module was coded in a way so that it could be modified and
+          extended several times.  There are now a number of versions of this
+          application running throughout the library:
+          <ul class="normal">
+            <li>
+              The original version of the application runs within the library
+              desktop website.
+            </li>
+            <li>
+              A second version runs on the library mobile website.
+            </li>
+            <li>
+              There is a touchscreen version that runs within the library’s
+              information kiosk.
+            </li>
+            <li>
+              A display only version shows currently open rooms on a prominently
+              displayed monitor.
+            </li>
+            <li>
+              And a version customized for the library’s Technology Enhanced
+              Collaboration Space runs on an iPad kiosk outside of that
+              workspace.
+            </li>
+          </ul>
+        </p>
+        <p>
+          A generic version of the application was
+          <a href="https://www.drupal.org/sandbox/BobHumphrey/1834546"
+          target="_blank">
+          released to the Drupal community
+        </a>.
+        The project was then upgraded to
+        <a href="https://www.drupal.org/project/room_reservations"
+        target="_blank">
+        a Drupal 7 module
+      </a>
+      by Peter Lindstrom of liquidcms.
+    </p>
   </div>
 </div>
-
-<!--
+</div>
 
 <div class="project">
   <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <img src="../images/get-it-from-randall.jpg" class="img-responsive" alt="Get it from Randall Library page">
+    </div>
+  </div>
+  <div class="row">
     <div class="col-md-8 col-md-offset-4">
-      <h4>XXXXX</h4>
+      <h3>Get It From Randall Library</h3>
     </div>
   </div>
   <div class="row">
     <div class="col-md-3">
       <ul class="skills">
-        <li>XXXXX &#x25CF; XXXXX</li>
-        <li>XXXXX &#x25CF; XXXXX &#x25CF; XXXXX</li>
-        <li>XXXXX &#x25CF; XXXXX &#x25CF; XXXXX</li>
-        <li>XXXXX &#x25CF; XXXXX &#x25CF; XXXXX</li>
-        <li><a href="XXXXX" target="_blank">See the Project</a></li>
+        <li>PHP &#x25CF; Yii Framework</li>
+        <li>MySQL &#x25CF; phpMyAdmin</li>
+        <li>JavaScript &#x25CF; jQuery</li>
+        <li>HTML &#x25CF; CSS</li>
+        <li><a href="http://library.uncw.edu/tools_widgets"
+          target="_blank">Vist the website</a></li>
       </ul>
     </div>
     <div class="col-md-8 col-md-offset-1">
       <p>
-        XXXXXXXXXX
+        WorldCat is a large database of library content and services that is
+        often used by students and researchers to locate books, music, videos,
+        and other items.  When Randall Library switched from WorldCat Local to
+        Summon as its primary resource database, we still wanted a way to
+        provide support to those patrons who would be continuing to use WorldCat.
+      </p>
+      <p>
+        Our solution was to create a bookmarklet that makes it easier for
+        researchers to get copies of materials found with WorldCat from Randall
+        Library. If the user is on any WorldCat title page, they can click the
+        bookmarklet, and the application will then search Randall Library’s
+        catalog to see if the item can be located.
+      </p>
+    </p>
+    <p>
+      If the item is found, the user will be taken to the library’s catalog
+      page, which has information on where to locate the item inside the
+      library.  If the item is not found, the user is redirected to Randall’s
+      interlibrary loan page.  A form is provided to request the item from
+      interlibrary loan, but the form is already completely filled out using
+      the information that was contained in WorldCat. All the patron has to do
+      is submit the form, and then Randall will borrow the item from another
+      library and make it available to the user.
+    </p>
+  </div>
+</div>
+</div>
+
+<div class="project">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <img src="../images/computer-availability.jpg" class="img-responsive" alt="Computer availability page">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
+      <h3>Learning Commons Computer Availability</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="skills">
+        <li>PHP &#x25CF; Yii Framework</li>
+        <li>MySQL &#x25CF; phpMyAdmin</li>
+        <li>HTML &#x25CF; CSS</li>
+        <li><a href="http://api.highcharts.com/highcharts" target="_blank">Highcharts charting API</a></li>
+      </ul>
+    </div>
+    <div class="col-md-8 col-md-offset-1">
+      <p>
+        Randall Library maintains 124 PCs for use by students in its Learning
+        Commons.  There are a number of challenges associated with this.  How
+        do we provide usage statistics to justify the expense of providing this
+        equipment?  How do we know when additional hardware needs to be p
+        urchased?  How do we direct students to open machines?   How can we
+        provide daily maintenance to this equipment in as efficient a manner as
+        possible?
+      </p>
+      <p>
+        Using <a href="https://www.lib.ncsu.edu/reports/computer-availability"
+        target="_blank">open source software created by North Carolina State
+        University</a> and <a href="http://www.labstats.com/" target="_blank">
+          proprietary reporting tools purchased from Labstats</a>,
+          we were able to create maps and reports showing current and historical
+          usage.  However, when Labstats increased their prices for a new version
+          of their software, which also required the purchase and maintenance of a
+          dedicated server, I was asked to provide a more cost effective in-house
+          solution.
+        </p>
+        <p>
+          I was able to build a database of PC usage for each machine and provide
+          graphical and table-based reporting for all of our resources on an
+          hourly, daily, weekly, and monthly basis.  This information is used to
+          demonstrate the service level being provided by the library, as well as
+          to plan for future expansion of this service.
+        </p>
+        <p>
+          I also created reports that show machines where no one has logged on or
+          logged off during the past 6, 12, and 24 hours.  This information is used
+          by our technical staff to quickly identify and resolve computer hardware
+          and software problems as soon as they arise.
+        </p>
+      </div>
+    </div>
+  </div>
+
+<div class="project">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <img src="../images/fund-report.jpg" class="img-responsive" alt="fund report">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
+      <h3>Fund Report for Selectors</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="skills">
+        <li>PHP &#x25CF; Yii Framework</li>
+        <li>MySQL &#x25CF; phpMyAdmin</li>
+        <li>HTML &#x25CF; CSS</li>
+        <li><a href="https://sandbox.iii.com/docs/Content/titlePage.htm"
+          target="_blank">Sierra Integrated Library System API</a></li>
+      </ul>
+    </div>
+    <div class="col-md-8 col-md-offset-1">
+      <p>
+        Collection development at an academic library is a complicated process.
+        Materials are acquired at Randall Library for over 40 different
+        departments, based in part on requests from faculty, students, and
+        librarians.  Budgets are developed on an annual basis, and purchases
+        need to be tracked against these budgets.
+      </p>
+      <p>
+        The information for managing this process had been housed in the
+        library’s ILS (integrated library system), but not in a way that was
+        practical for using and making decisions.   Also, much of this data was
+        lost over the course of the accounting cycle once certain fund activity
+        reports had been run.
+      </p>
+      <p>
+        This application was built to collect the required information on a
+        daily basis and store it in a local database where it would not be
+        deleted.  Then reports were built to display the information in a way
+        that clarified what items were being purchased, how much money was
+        being spent, and what funds were available for future purchases.
+    </p>
+  </div>
+</div>
+</div>
+
+
+<div class="project">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <img src="../images/dashboard.jpg" class="img-responsive" alt="Library dashboard page">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
+      <h3>Library Dashboard</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="skills">
+        <li>PHP &#x25CF; Drupal</li>
+        <li>JavaScript</li>
+        <li>MySQL &#x25CF; phpMyAdmin</li>
+        <li>HTML &#x25CF; CSS</li>
+        <li><a href="http://www.highcharts.com/">HighCharts API</a>
+        </li>
+        <li><a href="http://library.uncw.edu/facts_planning/dashboard"
+          target="_blank">Visit the site</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-8 col-md-offset-1">
+      <p>
+        Librarians (administrators, politicians, and a lot of other people) are
+        constantly asking the question:  What value is being provided by the
+        academic librarian in the Internet Age?
+      </p>
+      <p>
+        Randall Library, like every other library, knows that it has to make a
+        strong case to justify its considerable annual budget.  This is being
+        done in a lot of different ways.  One small part of this effort is the
+        Library Dashboard.  The dashboard is a visual presentation of the use,
+        activity, and resources available in the library.
+      </p>
+      <p>
+        I built the dashboard inside of the library’s Drupal website using PHP
+        and the Highcharts JavaScript library.  Where possible, the graphs are
+        updated in real time using current data from the library’s various
+        database applications.
       </p>
     </div>
   </div>
+</div>
+
+<div class="project">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <img src="../images/research-strategy.jpg" class="img-responsive" alt="Research strategy application">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
+      <h3>Research Strategy (needs text)</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="skills">
+        <li>PHP &#x25CF; Drupal</li>
+        <li>JavaScript &#x25CF; jQuery &#x25CF; Ajax</li>
+        <li>MySQL &#x25CF; phpMyAdmin</li>
+        <li>HTML &#x25CF; CSS</li>
+        <li>Screen scraping</li>
+        <li><a href="http://api.summon.serialssolutions.com/" target="_blank">Summon Serial Solutions API</a></li>
+        <li><a href="https://developers.google.com/custom-search/" target="_blank">Google Custom Search API</a></li>
+        <li><a href="http://library.uncw.edu/search_randall" target="_blank">Vist the Site</a></li>
+      </ul>
+    </div>
+    <div class="col-md-8 col-md-offset-1">
+      <p>
+        This is a new version of Randall Library’s search box that looks
+        across multiple systems, presenting the top results in separate
+        categories on a single page.  This kind of search application has
+        proven to be popular at many of the nation’s top academic libraries,
+        including UNC Chapel Hill, Duke, Princeton, and Cornell. The name
+        has been borrowed from Japanese takeout meals and lunch boxes,
+        where each individual item is placed in its own individual
+        compartment.
+      </p>
+      <p>
+        Patrons enter search terms in a simple box, and then the application
+        makes calls to various sources, including the library catalog,
+        Google, and Summon Serial Solutions, a service that provides access
+        to scholarly articles, journals, newspapers, and magazines.
+      </p>
+      <p>
+        Multiple Ajax calls are employed to fetch the information behind the
+        scenes, and then the results are presented in a way that encourages
+        additional searching and deeper exploration.  The application is
+        written as a Drupal module so that it integrates seamlessly with the
+        rest of the library website.
+      </p>
+    <p>
+      Search results for books, e-books, videos, and music come from Randall
+      Library’s own catalog, but we were unable to produce results that
+      were an exact match to our other catalog searches.  The reason for
+      this is that the catalog software is provided by an outside vendor
+      who doesn’t share their proprietary search algorithms.  We solved
+      this problem by screen-scraping our own catalog pages, with the payoff
+      being consistent results every time.
+    </p>
+  </div>
+</div>
+</div>
+
+<div class="project">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <img src="../images/linux.jpg" class="img-responsive" alt="Linux server console">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
+      <h3>Linux Server Administration (needs text)</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="skills">
+        <li>PHP &#x25CF; Drupal</li>
+        <li>JavaScript &#x25CF; jQuery &#x25CF; Ajax</li>
+        <li>MySQL &#x25CF; phpMyAdmin</li>
+        <li>HTML &#x25CF; CSS</li>
+        <li>Screen scraping</li>
+        <li><a href="http://api.summon.serialssolutions.com/" target="_blank">Summon Serial Solutions API</a></li>
+        <li><a href="https://developers.google.com/custom-search/" target="_blank">Google Custom Search API</a></li>
+        <li><a href="http://library.uncw.edu/search_randall" target="_blank">Vist the Site</a></li>
+      </ul>
+    </div>
+    <div class="col-md-8 col-md-offset-1">
+      <p>
+        This is a new version of Randall Library’s search box that looks
+        across multiple systems, presenting the top results in separate
+        categories on a single page.  This kind of search application has
+        proven to be popular at many of the nation’s top academic libraries,
+        including UNC Chapel Hill, Duke, Princeton, and Cornell. The name
+        has been borrowed from Japanese takeout meals and lunch boxes,
+        where each individual item is placed in its own individual
+        compartment.
+      </p>
+      <p>
+        Patrons enter search terms in a simple box, and then the application
+        makes calls to various sources, including the library catalog,
+        Google, and Summon Serial Solutions, a service that provides access
+        to scholarly articles, journals, newspapers, and magazines.
+      </p>
+      <p>
+        Multiple Ajax calls are employed to fetch the information behind the
+        scenes, and then the results are presented in a way that encourages
+        additional searching and deeper exploration.  The application is
+        written as a Drupal module so that it integrates seamlessly with the
+        rest of the library website.
+      </p>
+    <p>
+      Search results for books, e-books, videos, and music come from Randall
+      Library’s own catalog, but we were unable to produce results that
+      were an exact match to our other catalog searches.  The reason for
+      this is that the catalog software is provided by an outside vendor
+      who doesn’t share their proprietary search algorithms.  We solved
+      this problem by screen-scraping our own catalog pages, with the payoff
+      being consistent results every time.
+    </p>
+  </div>
+</div>
+</div>
+
+
+<div class="project">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <img src="../images/instructions.jpg" class="img-responsive" alt="Instructions data entry page">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
+      <h3>Instructions Reporting (needs text)</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="skills">
+        <li>PHP &#x25CF; Drupal</li>
+        <li>JavaScript &#x25CF; jQuery &#x25CF; Ajax</li>
+        <li>MySQL &#x25CF; phpMyAdmin</li>
+        <li>HTML &#x25CF; CSS</li>
+        <li>Screen scraping</li>
+        <li><a href="http://api.summon.serialssolutions.com/" target="_blank">Summon Serial Solutions API</a></li>
+        <li><a href="https://developers.google.com/custom-search/" target="_blank">Google Custom Search API</a></li>
+        <li><a href="http://library.uncw.edu/search_randall" target="_blank">Vist the Site</a></li>
+      </ul>
+    </div>
+    <div class="col-md-8 col-md-offset-1">
+      <p>
+        This is a new version of Randall Library’s search box that looks
+        across multiple systems, presenting the top results in separate
+        categories on a single page.  This kind of search application has
+        proven to be popular at many of the nation’s top academic libraries,
+        including UNC Chapel Hill, Duke, Princeton, and Cornell. The name
+        has been borrowed from Japanese takeout meals and lunch boxes,
+        where each individual item is placed in its own individual
+        compartment.
+      </p>
+      <p>
+        Patrons enter search terms in a simple box, and then the application
+        makes calls to various sources, including the library catalog,
+        Google, and Summon Serial Solutions, a service that provides access
+        to scholarly articles, journals, newspapers, and magazines.
+      </p>
+      <p>
+        Multiple Ajax calls are employed to fetch the information behind the
+        scenes, and then the results are presented in a way that encourages
+        additional searching and deeper exploration.  The application is
+        written as a Drupal module so that it integrates seamlessly with the
+        rest of the library website.
+      </p>
+    <p>
+      Search results for books, e-books, videos, and music come from Randall
+      Library’s own catalog, but we were unable to produce results that
+      were an exact match to our other catalog searches.  The reason for
+      this is that the catalog software is provided by an outside vendor
+      who doesn’t share their proprietary search algorithms.  We solved
+      this problem by screen-scraping our own catalog pages, with the payoff
+      being consistent results every time.
+    </p>
+  </div>
+</div>
+</div>
+
+<div class="project">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <img src="../images/eresource-admin.jpg" class="img-responsive" alt="E-resource administration page">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
+      <h3>E-resource Administration (needs text)</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="skills">
+        <li>PHP &#x25CF; Drupal</li>
+        <li>JavaScript &#x25CF; jQuery &#x25CF; Ajax</li>
+        <li>MySQL &#x25CF; phpMyAdmin</li>
+        <li>HTML &#x25CF; CSS</li>
+        <li>Screen scraping</li>
+        <li><a href="http://api.summon.serialssolutions.com/" target="_blank">Summon Serial Solutions API</a></li>
+        <li><a href="https://developers.google.com/custom-search/" target="_blank">Google Custom Search API</a></li>
+        <li><a href="http://library.uncw.edu/search_randall" target="_blank">Vist the Site</a></li>
+      </ul>
+    </div>
+    <div class="col-md-8 col-md-offset-1">
+      <p>
+        This is a new version of Randall Library’s search box that looks
+        across multiple systems, presenting the top results in separate
+        categories on a single page.  This kind of search application has
+        proven to be popular at many of the nation’s top academic libraries,
+        including UNC Chapel Hill, Duke, Princeton, and Cornell. The name
+        has been borrowed from Japanese takeout meals and lunch boxes,
+        where each individual item is placed in its own individual
+        compartment.
+      </p>
+      <p>
+        Patrons enter search terms in a simple box, and then the application
+        makes calls to various sources, including the library catalog,
+        Google, and Summon Serial Solutions, a service that provides access
+        to scholarly articles, journals, newspapers, and magazines.
+      </p>
+      <p>
+        Multiple Ajax calls are employed to fetch the information behind the
+        scenes, and then the results are presented in a way that encourages
+        additional searching and deeper exploration.  The application is
+        written as a Drupal module so that it integrates seamlessly with the
+        rest of the library website.
+      </p>
+    <p>
+      Search results for books, e-books, videos, and music come from Randall
+      Library’s own catalog, but we were unable to produce results that
+      were an exact match to our other catalog searches.  The reason for
+      this is that the catalog software is provided by an outside vendor
+      who doesn’t share their proprietary search algorithms.  We solved
+      this problem by screen-scraping our own catalog pages, with the payoff
+      being consistent results every time.
+    </p>
+  </div>
+</div>
+</div>
+
+<div class="project">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <img src="../images/guide_duplicates.jpg" class="img-responsive" alt="Duplicate resources report">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
+      <h3>Drupal Maintenance</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="skills">
+        <li>PHP &#x25CF; Drupal</li>
+        <li>Yii Framework</li>
+        <li>MySQL &#x25CF; phpMyAdmin</li>
+        <li>HTML &#x25CF; CSS</li>
+        <li><a href="http://library.uncw.edu/" target="_blank">Vist the Randall Library Site</a></li>
+        <li><a href="http://library.uncw.edu/cmc/" target="_blank">Vist the CMC Site</a></li>
+        <li><a href="http://library.uncw.edu/archives_special/" target="_blank">Vist the Archives and Special Collections Site</a></li>
+        <li><a href="http://library.uncw.edu/info_lit/" target="_blank">Vist the Info Lit Site</a></li>
+        <li><a href="https://randall3.uncw.edu/applied_learning/" target="_blank">Vist the Applied Learning Site</a></li>
+        <li><a href="http://portcitybizinfo.org/" target="_blank">Vist Port City BizInfo</a></li>
+      </ul>
+    </div>
+    <div class="col-md-8 col-md-offset-1">
+      <p>
+        There is always plenty of Drupal maintenance that needs to be done
+        at Randall Library.  We normally have between 15 and 20 sites running
+        for both patrons and internal library staff.
+      </p>
+      <p>
+        An example of a typical request involved creating a report of information
+        resources assigned to two or more research guides.  A sample from
+        the report is shown above.  Due to the complex nature of Drupal,
+        simple-sounding requests can often be extremely challenging.
+        The information required for the report was buried somewhere
+        within the database's 270 tables and 3 million plus records,
+        and nowhere was there documentation that would help me figure out
+        where it was all at.
+        <a href="" target="_blank">
+          Click here
+        </a>
+        for a look at the notes I made tracking down the relationships
+        in the database.
+      </p>
+    </p>
+    <p>
+      I was also asked to do things like:
+      <ul class="normal">
+        <li>
+          customize interfaces
+        </li>
+        <li>
+          hide sensitive data or prevent data being collected that would
+          violate our privacy guidelines
+        </li>
+        <li>
+          fix Drupal bugs
+        </li>
+        <li>
+          make Drupal do what it was never intended to do!
+        </li>
+      </ul>
+    </p>
+    <p>
+      Of course many changes went way beyond simple reports and customizations.
+      For these, I would write custom modules making full use of the
+      <a href="https://api.drupal.org/api/drupal" target="_blank">
+        Drupal programming API
+      </a>
+      .
+    </p>
+  </div>
+</div>
+</div>
+
+<div class="project">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <img src="../images/clickheat.jpg" class="img-responsive" alt="Click heat results page">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
+      <h3>Information Kiosk Usage</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="skills">
+        <li>Drupal</li>
+        <li>JavaScript</li>
+        <li>Open source software</li>
+      </ul>
+    </div>
+    <div class="col-md-8 col-md-offset-1">
+      <p>
+        The library created an electronic information kiosk to help patrons
+        find people, places, resources, and events within the
+        building.  We wanted to get a better idea if the application was
+        being used the way we envisioned.
+        <a href="http://www.labsmedia.com/clickheat/index.html"
+        target="_blank">ClickHeat</a> was identified as a good open
+        source heatmap tool to assist with this.
+        The tool creates a set of maps showing where the users are
+        clicking on every page of our site.
+        It was my job to
+        install the software and get it working with our Drupal application.
+      </p>
+  </div>
+</div>
+</div>
+
+</div>  <!-- end of projects -->
+
+<div id="other-projects">
+
+  <div class="project">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-4">
+        <h4>Virtual Shelf</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="skills">
+          <li>PHP &#x25CF; Yii Framework</li>
+          <li>MySQL &#x25CF; HTML &#x25CF; CSS</li>
+          <li>Sierra API</li>
+        </ul>
+      </div>
+      <div class="col-md-8 col-md-offset-1">
+        <p>
+          This project creates a local database of library inventory,
+          indexed by call number.  It involves downloading a million plus
+          records from
+          <a href="https://www.iii.com/products/sierra" target="_blank">
+            Sierra</a>, the library's resource management server hosted by
+            <a href="https://www.iii.com/" target="_blank">
+              Innovative Interfaces Inc</a>, using the API provided by the vendor.
+              Since transactions with Sierra timeout after several thousand
+              records have been received, this process has been built as a series
+              of batch jobs that repeat every five minutes beginning at 1 in
+              the morning.  The project includes online reports for monitoring
+              the batch jobs and viewing the resulting data.  It is the
+              foundation for a number of new applications to be built using this
+              data.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-4">
+            <h4>Information Literacy</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <ul class="skills">
+              <li>Responsive Design &#x25CF; Drupal</li>
+              <li>HTML &#x25CF; Sass &#x25CF; CSS</li>
+              <li><a href="http://library.uncw.edu/info_lit/" target="_blank">Vist the Site</a></li>
+            </ul>
+          </div>
+          <div class="col-md-8 col-md-offset-1">
+            <p>
+              <strong>Information Literacy</strong> is the ability to locate,
+              evaluate, and use information effectively.  This site was created
+              to help students, faculty, and librarians learn these skills.
+              My contribution was to modify the theme to create Randall
+              Library's first responsive website.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-4">
+            <h4>Best Bets</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <ul class="skills">
+              <li>PHP &#x25CF; Yii Framework</li>
+              <li>Bootstrap Framework</li>
+              <li>HTML &#x25CF; CSS &#x25CF; MySQL</li>
+            </ul>
+          </div>
+          <div class="col-md-8 col-md-offset-1">
+            <p>
+              <strong>Best Bets</strong> is a data entry app that allows
+              library staff to key in popular terms and resources that
+              are often searched for by students. This information will be used
+              to improve the library's
+              <a href="http://library.uncw.edu/search_randall" target="_blank">
+                Bento Box search</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-4">
+              <h4>Follow Me Tutorials</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <ul class="skills">
+                <li>JavaScript &#x25CF; HTML</li>
+                <li>Sass &#x25CF; CSS </li>
+                <li>Open source software</li>
+                <li><a href="http://library.uncw.edu/guided_tutorial/links/"
+                  target="_blank">Vist the Site</a></li>
+                </ul>
+              </div>
+              <div class="col-md-8 col-md-offset-1">
+                <p>
+                  This application allows librarians to create guided tutorials
+                  to help students access and use library, university, and other
+                  internet resouces.  Based on the open source
+                  <a href="http://code.library.arizona.edu/" target="_blank">
+                    Guide on the Side</a> project created by The University of
+                    Arizona, it displays instructions on one side of a browser
+                    window and a relevant web page on the other.  Students
+                    are advised to use the displayed web page to follow along
+                    with the instructions provided.  I was asked to
+                    customize the project for use at Randall Library, and to
+                    document the process so that other staff members could do the
+                    same.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-4">
+                  <h4>Assignment Calculator</h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <ul class="skills">
+                    <li>PHP &#x25CF; Drupal</li>
+                    <li>HTML &#x25CF; CSS</li>
+                    <li>Open source software</li>
+                    <li><a href="http://randall3.uncw.edu/assignmentcalc/" target="_blank">Vist the Site</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-8 col-md-offset-1">
+                  <p>
+                    The Assignment Calculator is open source software created by
+                    <a href="https://www.lib.umn.edu/apps/ac/" target="_blank">
+                      The University of Minnesota Libraries</a> to help students budget
+                      their time when working on complicated projects.  The student
+                      provides a due date, and the calculator breaks the assignment
+                      into a series of steps, each with its own completion date.  I
+                      added additional customization requested by Randall Library,
+                      including the ability to use multiple kinds of project templates
+                      within the application for different types of assignments.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+
+          <!--
+
+          <div class="project">
+          <div class="row">
+          <div class="col-md-8 col-md-offset-4">
+          <h4>XXXXX</h4>
+        </div>
+      </div>
+      <div class="row">
+      <div class="col-md-3">
+      <ul class="skills">
+      <li>XXXXX &#x25CF; XXXXX</li>
+      <li>XXXXX &#x25CF; XXXXX &#x25CF; XXXXX</li>
+      <li>XXXXX &#x25CF; XXXXX &#x25CF; XXXXX</li>
+      <li>XXXXX &#x25CF; XXXXX &#x25CF; XXXXX</li>
+      <li><a href="XXXXX" target="_blank">Vist the Site</a></li>
+    </ul>
+  </div>
+  <div class="col-md-8 col-md-offset-1">
+  <p>
+  XXXXXXXXXX
+</p>
+</div>
+</div>
 </div>
 
 -->

@@ -1,4 +1,12 @@
 {
+  "accessibility" : {
+    "stylesheet": "../css/app.css",
+    "title": "Accessibility "
+  },
+  "atom" : {
+    "stylesheet": "../css/app.css",
+    "title": "Atom Editor Cheat Sheet"
+  },
   "http" : {
     "stylesheet": "../css/app.css",
     "title": "HTTP 1.1 Cheat Sheet"
