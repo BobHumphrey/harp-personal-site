@@ -1,4 +1,12 @@
 {
+  "articles" : {
+    "stylesheet": "../css/app.css",
+    "title": "Articles and Presentations"
+  },
+  "code": {
+    "stylesheet": "../css/app.css",
+    "title": "Code Libraries"
+  },
   "ebooks": {
     "stylesheet": "../css/app.css",
     "title": "Ebooks"
@@ -7,13 +15,13 @@
     "stylesheet": "../css/app.css",
     "title": "Laravel"
   },
-  "miscellaneous": {
-    "stylesheet": "../css/app.css",
-    "title": "Miscellaneous"
-  },
   "news": {
     "stylesheet": "../css/app.css",
     "title": "News and Blogs"
+  },
+  "reference": {
+    "stylesheet": "../css/app.css",
+    "title": "Reference"
   },
   "tools": {
     "stylesheet": "../css/app.css",
