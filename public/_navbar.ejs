@@ -1,0 +1,49 @@
+<!-- NAVBAR ------------------------------------------------------------------->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="/images/logo-80.png"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/about.html">ABOUT</a></li>
+        <li><a href="/skills.html">SKILLS</a></li>
+        <li class="dropdown <%= current.source=='ebooks'?'active':'' %>">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            WORK <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="/work/personal.html">PERSONAL PROJECTS</a></li>
+            <li><a href="/work/randall.html">RANDALL LIBRARY PROJECTS</a></li>
+            <li><a href="/work/roadway.html">ROADWAY EXPRESS PROJECTS</a></li>
+          </ul>
+        </li>
+        <li><a href="/contact.html">CONTACT</a></li>
+        <li class="dropdown <%= current.source=='ebooks'?'active':'' %>">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            RESOURCES <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="/resources/articles.html">ARTICLES</a></li>
+            <li><a href="/resources/code.html">CODE LIBRARIES</a></li>
+            <li><a href="/resources/ebooks.html">EBOOKS</a></li>
+            <li><a href="/resources/laravel.html">LARAVEL</a></li>
+            <li><a href="/resources/news.html">NEWS AND BLOGS</a></li>
+            <li><a href="/resources/reference.html">REFERENCE</a></li>
+            <li><a href="/resources/tools.html">TOOLS</a></li>
+            <li><a href="/resources/vue.html">VUE.JS</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

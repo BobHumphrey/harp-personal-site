@@ -26,5 +26,9 @@
   "tools": {
     "stylesheet": "../css/app.css",
     "title": "Tools"
+  },
+  "vue": {
+    "stylesheet": "../css/app.css",
+    "title": "Vue.js"
   }
 }
