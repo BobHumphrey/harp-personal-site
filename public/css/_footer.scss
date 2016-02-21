@@ -5,12 +5,14 @@ footer {
   background: $footer-background;
 }
 footer .container {
-  display: flex;
   background:$footer-background;
   color: $secondary-color;
-  padding-bottom: 50px;
-  font-size: 14px;
-  line-height: 23px;
+  padding-bottom: 30px;
+  font-size: 13px;
+  line-height: 21px;
+}
+.footer-links-row {
+  padding: 0 200px;
 }
 .footer-title {
   font-weight: bold;
@@ -19,20 +21,21 @@ footer .container {
 .footer-title-top {
   margin-bottom: 8px;
 }
-.footer-list {
-  padding: 0 60px;
-}
-.footer-list-first {
-}
-.footer-list-last {
+.footer-logo-row {
   text-align: center;
-  font-weight: bold;
-  padding: 0 30px;
 }
 .footer-logo img {
-  margin-top: 50px;
-  margin-bottom: 75px;
+  margin-top: -26px;
+  margin-bottom: 0px;
   border: none;
+}
+.social-icons-row {
+  text-align: center;
+  padding-top: 50px;
+}
+i.fa {
+  margin-left: 6px;
+  margin-right: 6px;
 }
 .copyright {
   height: 50px;
@@ -43,6 +46,9 @@ footer .container {
   display: flex;
   background: $navbar-background;
 }
-i.fa {
-  margin-left: 6px;
+
+@media(min-width:$medium){
+  .footer-list-middle {
+    padding-left: 45px;
+  }
 }

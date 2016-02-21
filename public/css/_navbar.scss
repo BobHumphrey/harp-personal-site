@@ -29,6 +29,7 @@
 .navbar-default .navbar-nav>.active>a:hover {
   background: $navbar-background;
   color:  $secondary-color;
+  text-decoration: underline;
 }
 .nav .open>a,
 .nav .open>a:focus, .nav .open>a:hover,
@@ -52,6 +53,10 @@
 }
 .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
   color: $secondary-color;
+}
+.navbar-form {
+  margin-top: 6px;
+  margin-bottom: 0;
 }
 @media(min-width:768px){
   .navbar-nav>li>a {

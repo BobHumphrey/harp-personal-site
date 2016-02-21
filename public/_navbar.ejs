@@ -1,5 +1,19 @@
 <!-- NAVBAR ------------------------------------------------------------------->
 
+
+<%
+var workClass = '';
+if ((current.source == 'personal') || (current.source == 'randall') || (current.source == 'roadway')) {
+  workClass = 'active';
+}
+var resourcesClass = '';
+if ((current.source == 'articles') || (current.source == 'code') || (current.source == 'ebooks') ||
+(current.source == 'laravel') || (current.source == 'news') || (current.source == 'reference')  ||
+(current.source == 'tools') || (current.source == 'vue')) {
+  resourcesClass = 'active';
+}
+%>
+
 <nav class="navbar navbar-default" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -14,9 +28,9 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/about.html">ABOUT</a></li>
-        <li><a href="/skills.html">SKILLS</a></li>
-        <li class="dropdown <%= current.source=='ebooks'?'active':'' %>">
+        <li class="<%= current.source=='about'?'active':'' %>"><a href="/about.html">ABOUT</a></li>
+        <li class="<%= current.source=='skills'?'active':'' %>"><a href="/skills.html">SKILLS</a></li>
+        <li class="dropdown <%= workClass %>">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             WORK <span class="caret"></span>
           </a>
@@ -26,8 +40,8 @@
             <li><a href="/work/roadway.html">ROADWAY EXPRESS PROJECTS</a></li>
           </ul>
         </li>
-        <li><a href="/contact.html">CONTACT</a></li>
-        <li class="dropdown <%= current.source=='ebooks'?'active':'' %>">
+        <li class="<%= current.source=='contact'?'active':'' %>"><a href="/contact.html">CONTACT</a></li>
+        <li class="dropdown <%= resourcesClass %>">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             RESOURCES <span class="caret"></span>
           </a>
